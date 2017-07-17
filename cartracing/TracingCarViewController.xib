@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TracingCarViewController">
+            <connections>
+                <outlet property="advertiseBoard" destination="ewO-yb-LTe" id="RlM-hC-rRh"/>
+                <outlet property="currentCarMiles" destination="48" id="66"/>
+                <outlet property="currentMilesBoard" destination="3" id="65"/>
+                <outlet property="functionBtn" destination="42" id="73"/>
+                <outlet property="moveLabel" destination="J8U-SO-dzK" id="0kc-5c-Nm2"/>
+                <outlet property="segmentControl" destination="Bi4-XT-Ums" id="ZvM-wb-7wV"/>
+                <outlet property="view" destination="1" id="HOZ-eH-00T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="UIControl">
+            <rect key="frame" x="0.0" y="20" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                    <rect key="frame" x="43" y="20" width="234" height="48"/>
+                    <color key="backgroundColor" red="0.28235294117647058" green="0.31764705882352939" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="CLe-iZ-GaK"/>
+                        <constraint firstAttribute="width" constant="234" id="aH9-Ar-Vzy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="里程" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="60" y="34" width="24" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="CP8-Hf-GMm"/>
+                        <constraint firstAttribute="height" constant="21" id="Enn-GO-x64"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-XT-Ums">
+                    <rect key="frame" x="50" y="114" width="220" height="29"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="kRK-9n-foz"/>
+                        <constraint firstAttribute="height" constant="28" id="sIf-lo-Ako"/>
+                    </constraints>
+                    <segments>
+                        <segment title="保养"/>
+                        <segment title="加油"/>
+                        <segment title="维修"/>
+                    </segments>
+                    <color key="tintColor" red="0.0" green="0.99215692280000001" blue="0.35294118520000001" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <action selector="switchFunction:" destination="-1" eventType="valueChanged" id="HTL-eW-Q5I"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42">
+                    <rect key="frame" x="20" y="520" width="280" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="aC2-7Z-Dop"/>
+                    </constraints>
+                    <state key="normal" title="Button" backgroundImage="bluebutton_unpressed.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="functionOperation:" destination="-1" eventType="touchUpInside" id="72"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="edit_miles.png" translatesAutoresizingMaskIntoConstraints="NO" id="52">
+                    <rect key="frame" x="248" y="38" width="20" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="66f-S8-uEh"/>
+                        <constraint firstAttribute="height" constant="20" id="I8J-oc-XUy"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8U-SO-dzK" customClass="MoveLabel">
+                    <rect key="frame" x="43" y="87" width="234" height="23"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="PTJ-Do-wgf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-yb-LTe">
+                    <rect key="frame" x="79" y="71" width="163" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="jfe-s0-9Rt"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="xQK-G5-pIG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
+                    <state key="normal" title="汽车云管理提醒您">
+                        <color key="titleColor" red="0.0039215686274509803" green="0.51372549019607838" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showECardView:" destination="-1" eventType="touchUpInside" id="KB6-FT-AtQ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" text="0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48">
+                    <rect key="frame" x="100" y="34" width="52" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="Ga7-et-0di"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3sV-ZH-iIC">
+                    <rect key="frame" x="0.0" y="150" width="320" height="362"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UgN-G5-pag">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="0.14117647058823529" green="0.20392156862745098" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="tintColor" red="0.2148109325" green="0.3023558864" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="3" firstAttribute="trailing" secondItem="J8U-SO-dzK" secondAttribute="trailing" id="5Bn-hs-ATm"/>
+                <constraint firstAttribute="trailing" secondItem="42" secondAttribute="trailing" constant="20" id="6NZ-lJ-ysd"/>
+                <constraint firstItem="3" firstAttribute="centerY" secondItem="11" secondAttribute="centerY" constant="-0.5" id="6TL-kM-yaT"/>
+                <constraint firstItem="ewO-yb-LTe" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="3" id="6m9-vb-orW"/>
+                <constraint firstItem="42" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="7oP-BP-xxT"/>
+                <constraint firstItem="J8U-SO-dzK" firstAttribute="centerX" secondItem="ewO-yb-LTe" secondAttribute="centerX" id="F3x-xR-g1y"/>
+                <constraint firstAttribute="trailing" secondItem="52" secondAttribute="trailing" constant="52" id="KmN-gc-eUn"/>
+                <constraint firstAttribute="centerX" secondItem="Bi4-XT-Ums" secondAttribute="centerX" id="Kz0-yF-D3k"/>
+                <constraint firstItem="3" firstAttribute="leading" secondItem="J8U-SO-dzK" secondAttribute="leading" id="OUR-FS-XhL"/>
+                <constraint firstItem="52" firstAttribute="top" secondItem="1" secondAttribute="top" constant="38" id="P2D-N5-8xD"/>
+                <constraint firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="P2S-Am-Rp0"/>
+                <constraint firstItem="48" firstAttribute="top" secondItem="1" secondAttribute="top" constant="34" id="cVh-Jx-StY"/>
+                <constraint firstItem="J8U-SO-dzK" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="dLP-bE-Akz"/>
+                <constraint firstAttribute="bottom" secondItem="42" secondAttribute="bottom" constant="4" id="dzX-Tn-WbI"/>
+                <constraint firstItem="48" firstAttribute="leading" secondItem="11" secondAttribute="trailing" constant="16" id="ePL-Yw-fJI"/>
+                <constraint firstItem="3" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="sAL-nx-qw4"/>
+                <constraint firstItem="J8U-SO-dzK" firstAttribute="top" secondItem="1" secondAttribute="top" constant="87" id="ubB-s2-cXD"/>
+                <constraint firstItem="Bi4-XT-Ums" firstAttribute="top" secondItem="1" secondAttribute="top" constant="114" id="zIJ-PK-hkz"/>
+                <constraint firstItem="11" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="zoA-18-Pf9"/>
+            </constraints>
+            <connections>
+                <action selector="removeCarsTableView:" destination="-1" eventType="touchUpInside" id="FW5-3f-Yoa"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bluebutton_unpressed.png" width="440" height="60"/>
+        <image name="edit_miles.png" width="55" height="67"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

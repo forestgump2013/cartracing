@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarManageViewController">
+            <connections>
+                <outlet property="addMaintainItemBtn" destination="oC1-xR-iJn" id="mdV-Dd-g3l"/>
+                <outlet property="deleteCarBtn" destination="QcS-St-IWa" id="gRC-z6-jch"/>
+                <outlet property="maintainItemsTable" destination="ory-od-yEK" id="1hx-fm-xrh"/>
+                <outlet property="oneCarLicense" destination="jFQ-JS-DV8" id="GoD-Js-aeM"/>
+                <outlet property="view" destination="hBX-Kj-F53" id="fFW-PB-bzC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hBX-Kj-F53" customClass="UIControl">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车牌号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5v-Vc-zsf">
+                    <rect key="frame" x="20" y="20" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="QOS-UG-EA6"/>
+                        <constraint firstAttribute="width" constant="42" id="zQC-mZ-dwW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-JS-DV8">
+                    <rect key="frame" x="95" y="17" width="97" height="30"/>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.1764705882" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ory-od-yEK">
+                    <rect key="frame" x="20" y="106" width="280" height="442"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="T5m-2W-mye"/>
+                        <outlet property="delegate" destination="-1" id="BoQ-SO-Vrv"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcS-St-IWa" customClass="BlueButton">
+                    <rect key="frame" x="218" y="17" width="72" height="30"/>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.1764705882" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="Gxu-6e-Fni"/>
+                        <constraint firstAttribute="height" constant="30" id="QLP-Gn-xFf"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="删除车辆">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteEditedCar:" destination="-1" eventType="touchUpInside" id="Mb6-9s-wc9"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑保养项目" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-Sy-HeU">
+                    <rect key="frame" x="20" y="67" width="118" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Lu7-hZ-SCr"/>
+                        <constraint firstAttribute="width" constant="118" id="hei-l1-69x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-xR-iJn" customClass="BlueButton">
+                    <rect key="frame" x="218" y="63" width="72" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Flu-Bl-sJJ"/>
+                        <constraint firstAttribute="width" constant="72" id="ugJ-9o-yrF"/>
+                    </constraints>
+                    <state key="normal" title="添加保养">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loadAddMaintainItemView:" destination="-1" eventType="touchUpInside" id="cLe-TU-uso"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rpM-Sy-HeU" firstAttribute="leading" secondItem="B5v-Vc-zsf" secondAttribute="leading" id="2rf-P6-AYy"/>
+                <constraint firstItem="QcS-St-IWa" firstAttribute="top" secondItem="hBX-Kj-F53" secondAttribute="top" constant="17" id="5zO-ft-Rus"/>
+                <constraint firstAttribute="trailing" secondItem="ory-od-yEK" secondAttribute="trailing" constant="20" id="BT7-dr-3Ho"/>
+                <constraint firstItem="B5v-Vc-zsf" firstAttribute="top" secondItem="hBX-Kj-F53" secondAttribute="top" constant="20" symbolic="YES" id="FgG-np-Jib"/>
+                <constraint firstItem="oC1-xR-iJn" firstAttribute="leading" secondItem="rpM-Sy-HeU" secondAttribute="trailing" constant="80" id="TKs-c1-3Ic"/>
+                <constraint firstAttribute="bottom" secondItem="ory-od-yEK" secondAttribute="bottom" constant="20" id="VIK-cn-sbv"/>
+                <constraint firstItem="jFQ-JS-DV8" firstAttribute="leading" secondItem="B5v-Vc-zsf" secondAttribute="trailing" constant="33" id="Z3E-Tr-77F"/>
+                <constraint firstItem="ory-od-yEK" firstAttribute="leading" secondItem="hBX-Kj-F53" secondAttribute="leading" constant="20" id="Znb-UB-eyk"/>
+                <constraint firstItem="rpM-Sy-HeU" firstAttribute="top" secondItem="B5v-Vc-zsf" secondAttribute="bottom" constant="26" id="bRC-yL-vF3"/>
+                <constraint firstItem="jFQ-JS-DV8" firstAttribute="top" secondItem="hBX-Kj-F53" secondAttribute="top" constant="17" id="fVM-wH-MEg"/>
+                <constraint firstItem="B5v-Vc-zsf" firstAttribute="leading" secondItem="hBX-Kj-F53" secondAttribute="leading" constant="20" id="ion-eA-CWY"/>
+                <constraint firstItem="oC1-xR-iJn" firstAttribute="top" secondItem="QcS-St-IWa" secondAttribute="bottom" constant="16" id="lUa-qL-ODa"/>
+                <constraint firstAttribute="trailing" secondItem="QcS-St-IWa" secondAttribute="trailing" constant="30" id="qGx-3M-pkP"/>
+                <constraint firstItem="ory-od-yEK" firstAttribute="top" secondItem="rpM-Sy-HeU" secondAttribute="bottom" constant="18" id="qy6-xk-xWE"/>
+                <constraint firstItem="QcS-St-IWa" firstAttribute="leading" secondItem="jFQ-JS-DV8" secondAttribute="trailing" constant="26" id="xMF-hn-e29"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <action selector="takeAwayCarsTable:" destination="-1" eventType="touchUpInside" id="21Q-Lt-WZc"/>
+            </connections>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
